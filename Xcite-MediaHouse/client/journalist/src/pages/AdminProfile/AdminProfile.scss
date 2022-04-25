@@ -1,0 +1,117 @@
+$small: 650px;
+$medium: 1200px;
+.AdminProfile {
+  width: 100%;
+  display: flex;
+  min-height: 100vh;
+  .AdminProfileContainer {
+    flex: 6;
+    .top,
+    .bottom {
+      -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+      box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+      padding: 10px;
+      margin: 20px;
+      display: flex;
+      h1 {
+        color: lightgray;
+        font-size: 20px;
+      }
+      .left {
+        flex: 1;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media screen and (max-width: $medium) {
+          flex: 0;
+        }
+        .AdminbackgroundColor {
+          width: 300px;
+          height: 90%;
+          z-index: +1;
+          background-color: rgba(0, 0, 255, 0.637);
+          @media screen and (max-width: $medium) {
+            flex-direction: column;
+            display: none;
+          }
+          img {
+            width: 400px;
+            height: 300px;
+            z-index: +2;
+            display: flex;
+
+            margin: 30% 0%;
+            margin-left: -50px;
+            object-fit: cover;
+            @media screen and (max-width: $medium) {
+              border-radius: 50%;
+              width: 200px;
+              height: 200px;
+            }
+          }
+        }
+      }
+      .right {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        position: relative;
+
+        .right_box {
+          position: absolute;
+          width: 75px;
+          height: 450px;
+
+          background-color: rgba(0, 0, 255, 0.637);
+          top: 10;
+          right: 0;
+        }
+        .profile_text {
+          margin: 10% 10%;
+          Button {
+            margin-top: 20px;
+          }
+        }
+        form {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 30px;
+          justify-content: space-around;
+          .formInput {
+            width: 40%;
+            label {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              .icon {
+                cursor: pointer;
+              }
+            }
+
+            input {
+              width: 100%;
+              padding: 5px;
+              border: none;
+              border-bottom: 1px solid gray;
+              outline: none;
+            }
+          }
+          button {
+            width: 150px;
+            padding: 10px;
+            border: none;
+            background-color: rgb(8, 219, 8);
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+$breakpoint-tablet: 768px;

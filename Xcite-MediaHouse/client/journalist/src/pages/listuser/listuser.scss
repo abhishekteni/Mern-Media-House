@@ -1,0 +1,18 @@
+.userslist {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  .list_users_Container {
+    flex: 6;
+    .tableContainer_users {
+      padding: 0px 50px;
+      .listUsers_title {
+        -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+        box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+        padding: 10px;
+
+        display: flex;
+      }
+    }
+  }
+}

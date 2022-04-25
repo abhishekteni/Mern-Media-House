@@ -1,0 +1,65 @@
+$small: 650px;
+$medium: 1200px;
+.sidebar {
+  flex: 1;
+  border-right: 0.5px solid lightgray;
+  min-height: 100vh;
+  background-color: rgb(255, 255, 255);
+  @media screen and (max-width: $medium) {
+    position: absolute;
+    z-index: +10;
+    width: 50vw;
+  }
+  .top {
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media screen and (max-width: $medium) {
+      margin-left: 40px;
+    }
+    .Admin_logo {
+      font-size: 20px;
+      font-weight: bold;
+      color: blueviolet;
+    }
+  }
+  hr {
+    height: 0;
+    border: 0.5px solid lightgray;
+  }
+  .center {
+    padding-left: 10px;
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      .title {
+        font-size: 10px;
+        font-weight: bold;
+        color: #999;
+        margin-top: 15px;
+        margin-bottom: 5px;
+      }
+      li {
+        display: flex;
+        align-items: center;
+        padding: 5px;
+        cursor: pointer;
+        &:hover {
+          background-color: #ece8ff;
+        }
+        .icon {
+          font-size: 18px;
+          color: #7451f8;
+        }
+        span {
+          font-size: 15px;
+          font-weight: bold;
+          color: #888;
+          margin-left: 15px;
+        }
+      }
+    }
+  }
+}
