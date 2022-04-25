@@ -33,9 +33,21 @@ const Pending = () => {
             className="waiting_image"
             src="https://i.gifer.com/origin/f5/f5baef4b6b6677020ab8d091ef78a3bc_w200.gif"
           />
-          <button className="Home_btn_waiting">
-            <Link to="/">Home</Link>
-          </button>
+          <div
+            style={{
+              display: "flex",
+              width: "250px",
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+          >
+            <Link to="/" style={{ textDecoration: "none" }}>
+              <button className="Home_btn_waiting">Home </button>
+            </Link>
+            <Link to="/login" style={{ textDecoration: "none" }}>
+              <button className="Home_btn_waiting">Login </button>
+            </Link>
+          </div>
           <h1>Waiting for the approval</h1>
           <p>Please wait for 24hrs to get a response from the admin</p>
         </ListSubheader>

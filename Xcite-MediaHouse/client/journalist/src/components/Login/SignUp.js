@@ -72,6 +72,10 @@ function SignUp() {
         let filename = res.data.original_filename + "." + res.data.format;
         console.log(filename);
         setUserData({
+          firstName: userData.firstName,
+          lastName: userData.lastName,
+          email: userData.email,
+          password: userData.password,
           resume: res.data.secure_url,
         });
       })

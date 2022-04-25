@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Navbar from "../../components/navbar/Navbar";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Typography from "@mui/material/Typography";
@@ -8,7 +8,7 @@ import VerifiedUserIcon from "@mui/icons-material/VerifiedUser";
 import AdminPanelSettingsIcon from "@mui/icons-material/AdminPanelSettings";
 import "./AdminProfile.scss";
 import { Link } from "react-router-dom";
-import { List } from "@mui/material";
+
 const AdminProfile = () => {
   const userInfo = JSON.parse(localStorage.getItem("userInfo"));
   console.log(userInfo);
@@ -47,22 +47,22 @@ const AdminProfile = () => {
               >
                 <EmailIcon style={{ color: "blue" }} />
                 {userInfo.email}
-                {userInfo.admin == true ? (
+                {userInfo.admin === true ? (
                   <AdminPanelSettingsIcon style={{ color: "limegreen" }} />
                 ) : (
                   <VerifiedUserIcon style={{ color: "orange" }} />
                 )}
 
-                {userInfo.admin == true ? "Admin" : "User"}
+                {userInfo.admin === true ? "Admin" : "User"}
               </Typography>
 
               <Typography variant="body1" gutterBottom>
-                {userInfo.admin == true
+                {userInfo.admin === true
                   ? "Admin has the authority to view statistics of the panel. Furthermore, admin has the command to change, update and admit any given profile on the panel. Lastly, even Admin can create and upload blogs on the server"
                   : "Users has the authority to view different profile and blogs.Secondly, users can change, update their respective profile without any intervention from the admin. However, only selected users can write a blog on the server. "}
               </Typography>
               <Link
-                to={`/users/${userInfo.id}`}
+                to={`/journalists/${userInfo.id}`}
                 style={{ textDecoration: "none" }}
               >
                 <Button variant="contained">View profile</Button>
