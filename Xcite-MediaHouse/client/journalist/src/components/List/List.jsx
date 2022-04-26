@@ -1,6 +1,5 @@
 import React from "react";
 import "./list.scss";
-
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -10,61 +9,6 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 
 const List = ({ data }) => {
-  console.log(data);
-
-  const rows = [
-    {
-      _id: 121212,
-      title: " Hello there",
-      image:
-        "https://images.pexels.com/photos/518895/pexels-photo-518895.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      author: "Jack",
-      createdAt: "1 March",
-      tags: "nature, black",
-      status: "Pending",
-    },
-    {
-      _id: 121212,
-      title: " Hello there",
-      image:
-        "https://images.pexels.com/photos/518895/pexels-photo-518895.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      author: "Jack",
-      createdAt: "1 March",
-      tags: "nature, black",
-      status: "Approved",
-    },
-    {
-      _id: 121212,
-      title: " Hello there",
-      image:
-        "https://images.pexels.com/photos/518895/pexels-photo-518895.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      author: "Jack",
-      createdAt: "1 March",
-      tags: "nature, black",
-      status: "Approved",
-    },
-    {
-      _id: 121212,
-      title: " Hello there",
-      image:
-        "https://images.pexels.com/photos/518895/pexels-photo-518895.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      author: "Jack",
-      createdAt: "1 March",
-      tags: "nature, black",
-      status: "Approved",
-    },
-    {
-      _id: 121212,
-      title:
-        " Hello theresnflmsdlfnlsdnfknsdfkjnsdkjfnksndfkndkfndknknknknknknknknknknknknknknknknknknknknknknksdfhkjsdfkjsndfkjbsdkjfbkjsdbfksbdfkjbsdkjfbsdhfbdsfvhsdfdsbjhnknknknknknjxndvlnsdkvnkldsnfksdnfnsdfnk",
-      image:
-        "https://images.pexels.com/photos/518895/pexels-photo-518895.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      author: "Jack",
-      createdAt: "1 March",
-      tags: "nature, black",
-      status: "Pending",
-    },
-  ];
   return (
     <TableContainer component={Paper} className="table">
       <Table sx={{ minWidth: 650 }} aria-label="simple table">

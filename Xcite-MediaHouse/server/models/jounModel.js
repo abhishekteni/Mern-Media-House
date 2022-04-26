@@ -47,6 +47,9 @@ const jounSchema = new mongoose.Schema(
       },
     ],
   },
+  {
+    timestamps: true,
+  },
   opts
 );
 

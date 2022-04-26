@@ -105,14 +105,6 @@ const Sidebar = () => {
                   <span>Blogs</span>
                 </li>
               </Link>
-              {/* <li>
-            <ListAltIcon className="icon" />
-            <span>orders</span>
-          </li> */}
-              {/* <li>
-            <LocalShippingOutlinedIcon className="icon" />
-            <span>Delivery</span>
-          </li> */}
               <p className="title">USEFULL LINKS</p>
               <Link to="/statistics" style={{ textDecoration: "none" }}>
                 <li>
@@ -160,7 +152,7 @@ const Sidebar = () => {
               </Link>
               <li>
                 <LogoutOutlinedIcon className="icon" />
-                {/* <span onClick={onLogout}>Log out</span> */}
+
                 <div>
                   <span onClick={handleClickOpen}>Log out</span>
                   <Dialog

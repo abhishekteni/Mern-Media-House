@@ -3,7 +3,6 @@ import Home from "./pages/Home/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./pages/style/dark.scss";
 import List from "./pages/list/List";
-
 import Notification from "./pages/Notification/Notification";
 import Single from "./pages/single/Single";
 import { getSetToken, getUserInfo } from "./redux/action/userAction";
@@ -16,9 +15,7 @@ import Pending from "./pages/Pending/Pending";
 import { useDispatch, useSelector } from "react-redux";
 import SignInScreen from "./pages/Loginscreen/SignInScreen";
 import SignUpScreen from "./pages/Loginscreen/SignUpScreen";
-
 import RecoveryScreen from "./pages/Loginscreen/RecoveryScreen";
-import { useEffect, useState } from "react";
 import AdminProfile from "./pages/AdminProfile/AdminProfile";
 import Listuser from "./pages/listuser/Listuser";
 import NotFound from "./pages/NotFound/NotFound";
@@ -30,7 +27,7 @@ function App() {
   const darkmode = useSelector((state) => state.setDark.showDark);
 
   // Sendin Token To Redux
-  console.log(darkmode + "hello");
+
   dispatch(getSetToken(token));
   dispatch(getUserInfo(userInfo));
 
@@ -63,7 +60,7 @@ function App() {
               <Route path="pending" element={<Pending />} />
               <Route
                 path="notification"
-                element={authUser ? <Notification /> : <Pending />}
+                element={authUser ? <Notification /> : <SignInScreen />}
               />
               <Route
                 path="acceptedList"
@@ -73,10 +70,13 @@ function App() {
                 path="Statistics"
                 element={authUser ? <Statistics /> : <SignInScreen />}
               />
-              <Route path="allblogs" element={<Blogs />} />
+              <Route
+                path="allblogs"
+                element={authUser ? <Blogs /> : <SignInScreen />}
+              />
             </Route>
             <Route path="journalists">
-              <Route index element={<List />} />
+              <Route index element={authUser ? <List /> : <SignInScreen />} />
 
               <Route path=":userId" element={<Single />} />
               <Route
@@ -110,5 +110,3 @@ function App() {
 }
 
 export default App;
-
-// MONGO_URI = mongodb://127.0.0.1:27017

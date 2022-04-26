@@ -49,9 +49,6 @@ function Recovery() {
       data: body,
     })
       .then((response) => {
-        console.log(response);
-        console.log(response.data.token + "Helllo tokennnn");
-
         // dispatch(getLoading(false));
         dispatch(getSuccess(response.data.token));
         // dispatch(

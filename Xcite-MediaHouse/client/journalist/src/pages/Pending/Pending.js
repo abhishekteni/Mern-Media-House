@@ -11,7 +11,6 @@ const Pending = () => {
       <div className="listContainer">
         <ListSubheader component="div" className="Pending_title">
           <div
-            classname="regist_msg"
             style={{
               background: "rgba(34, 255, 5, 0.164)",
               width: "100%",

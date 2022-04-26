@@ -1,19 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Datatable.scss";
 import { DataGrid } from "@mui/x-data-grid";
-import { userColumns, userRows } from "../../pages/Datatablesource";
+import { userColumns } from "../../pages/Datatablesource";
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
 import { Accept } from "../../pages/Apicall";
-import { toast } from "react-toastify";
-import { Button } from "@mui/material";
 import { useSelector } from "react-redux";
 const axios = require("axios");
 
 const Datatable = ({ data }) => {
-  // const handleDelete = (id) => {
-  //   setData(data.filter((item) => item.id !== id));
-  // };
   const token = useSelector((state) => state.userAuth.success);
   const authUser = useSelector((state) => state.userAuth.success);
   const userInfo = JSON.parse(localStorage.getItem("userInfo"));
@@ -45,7 +39,7 @@ const Datatable = ({ data }) => {
       renderCell: (params) => {
         return (
           <div className="cellAction">
-            {jounIds == params.row._id || userInfo.admin == true ? (
+            {jounIds === params.row._id || userInfo.admin === true ? (
               <Link
                 to={`/journalists/${params.row._id}/new`}
                 style={{ textDecoration: "none" }}
@@ -81,10 +75,6 @@ const Datatable = ({ data }) => {
             >
               Reject
             </div>
-
-            {/* <Link to="/users/test" style={{ textDecoration: "none" }}>
-              <div className="viewButton">View</div>
-            </Link> */}
           </div>
         );
       },
@@ -95,9 +85,10 @@ const Datatable = ({ data }) => {
       <DataGrid
         className="datagrid"
         rows={data}
+        getRowId={(row) => row._id}
         columns={
           authUser
-            ? userInfo.admin == true
+            ? userInfo.admin === true
               ? userColumns.concat(viewColumn, actionColumn, editColumn)
               : userColumns.concat(viewColumn, editColumn)
             : userColumns.concat(viewColumn)

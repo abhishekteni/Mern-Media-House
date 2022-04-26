@@ -200,8 +200,6 @@ const Blogs = () => {
         "x-access-token": token,
       },
     }).then((res) => {
-      console.log("hello");
-      console.log(res.data.data[0].blogInfo);
       const myrepo = res.data.data;
       SetBlogdata(myrepo);
     });

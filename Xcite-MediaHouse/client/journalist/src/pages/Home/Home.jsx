@@ -42,8 +42,6 @@ const Home = () => {
           <Widgets type="user" />
           <Widgets type="blogs" />
           <Widgets type="Journalists" />
-          {/* <Widgets type="categories" />
-          <Widgets type="categories" /> */}
         </div>
         <div className="charts">
           <Chart

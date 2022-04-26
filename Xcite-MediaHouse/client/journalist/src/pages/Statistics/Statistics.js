@@ -2,7 +2,6 @@ import React from "react";
 import axios from "axios";
 import Navbar from "../../components/navbar/Navbar";
 import Sidebar from "../../components/sidebar/Sidebar";
-import Widgets from "../../components/widgets/Widgets";
 import { AreaChart, LineChart, BarChart, Line, Area, Bar } from "recharts";
 import Featured from "../../components/featured/Featured";
 import { useDispatch, useSelector } from "react-redux";

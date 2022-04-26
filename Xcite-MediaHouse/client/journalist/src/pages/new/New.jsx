@@ -29,7 +29,7 @@ const New = () => {
         "x-access-token": token,
       },
       body: JSON.stringify({
-        jounId: userInfo.admin == true ? id.userId : jounIds,
+        jounId: userInfo.admin === true ? id.userId : jounIds,
         avatarLink: url,
       }),
     })
@@ -169,7 +169,6 @@ const New = () => {
               />
 
               <button type="submit">Submit</button>
-              {/* <button onClick={postProfile}>Submit</button> */}
             </form>
           </div>
         </div>

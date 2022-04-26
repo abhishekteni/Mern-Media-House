@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 
 const AdminProfile = () => {
   const userInfo = JSON.parse(localStorage.getItem("userInfo"));
-  console.log(userInfo);
+
   return (
     <div className="AdminProfile">
       <Sidebar />
