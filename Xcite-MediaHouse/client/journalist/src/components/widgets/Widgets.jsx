@@ -6,6 +6,7 @@ import BackupTableIcon from "@mui/icons-material/BackupTable";
 import ClassIcon from "@mui/icons-material/Class";
 import QueryStatsIcon from "@mui/icons-material/QueryStats";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 const Widgets = ({ type }) => {
   let data;
 
@@ -17,7 +18,14 @@ const Widgets = ({ type }) => {
       data = {
         title: "USERS",
         count: totaluserscount,
-        link: "see all users",
+        link: (
+          <Link
+            to="/userslist"
+            style={{ textDecoration: "none", color: "gray" }}
+          >
+            see all users
+          </Link>
+        ),
         icon: (
           <AccountCircleOutlinedIcon
             className="icon"
@@ -30,7 +38,14 @@ const Widgets = ({ type }) => {
       data = {
         title: "blogs",
         count: totalblogfount,
-        link: "see all blogs",
+        link: (
+          <Link
+            to="/allblogs"
+            style={{ textDecoration: "none", color: "gray" }}
+          >
+            see all blogs
+          </Link>
+        ),
         icon: (
           <BackupTableIcon
             className="icon"
@@ -43,7 +58,14 @@ const Widgets = ({ type }) => {
       data = {
         title: "Journalists",
         count: totaljouncount,
-        link: "see all Journalists",
+        link: (
+          <Link
+            to="/journalists"
+            style={{ textDecoration: "none", color: "gray" }}
+          >
+            see all Journalists
+          </Link>
+        ),
         icon: (
           <ClassIcon
             className="icon"

@@ -21,7 +21,7 @@ const jounRegister = asyncHandler(async (req, res) => {
       password: hashPassword,
       resume,
     });
-    console.log("hello5");
+
     if (newJoun) {
       res.status(200).json({
         success: true,
@@ -113,7 +113,6 @@ const getJounById = asyncHandler(
 
 // Get Journalist By Name
 const getJounByName = asyncHandler(async (req, res) => {
-  console.log(req.params.search);
   const journalist = await Journalist.findOne({ name: req.params.search });
 
   console.log(journalist);
